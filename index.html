@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Excuse Generator</h1>
+    <h1 id="excuse"></h1>
+
+    <script>
+      document.getElementById('excuse').innerHTML = generator();
+      function generator() {
+        let who = ['The dog','My granma','His turtle','My bird','My neighbour'];
+        let what = ['ate','pissed','crushed','broke','stole'];
+        let when = ['before the class','right in time','when I finished','during my lunch','while I was praying'];
+        let whoIn = Math.floor(Math.random() * who.length);
+        let whatIn = Math.floor(Math.random() * what.length);
+        let whenIn = Math.floor(Math.random() * when.length);
+
+        return who[whoIn] + ' ' + what[whatIn] + ' ' + when[whenIn];
+      }
+
+    </script>
+  </body>
+</html>
